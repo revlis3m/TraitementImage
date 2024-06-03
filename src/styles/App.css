@@ -1,0 +1,14 @@
+/* src/styles/App.css */
+.App {
+    text-align: center;
+    height: 100vh; /* Assure que l'App prend toute la hauteur de l'écran */
+    overflow: hidden; /* Empêche le défilement */
+  }
+  
+  main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
