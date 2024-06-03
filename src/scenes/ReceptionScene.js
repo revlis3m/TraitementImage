@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'wouter';
 import '../styles/ReceptionScene.css';
-import hospitalImage from '../assets/images/hopital.jpg';
+import hospitalImage from '../assets/images/hopital-entrance.jpg';
 import WelcomeDialog from '../components/WelcomeDialog';
 
 const ReceptionScene = () => {
