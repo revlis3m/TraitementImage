@@ -1,0 +1,20 @@
+/* src/styles/Ophtalmo.css */
+.department-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .department-container h1 {
+    margin-bottom: 20px;
+  }
+  
+  .department-container p {
+    margin: 5px 0;
+  }
+  
+  #threejs-container {
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
+  }
+  
