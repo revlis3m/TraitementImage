@@ -1,20 +1,18 @@
 /* src/styles/Ophtalmo.css */
-.department-container {
+.ophtalmo-container {
     text-align: center;
     padding: 20px;
   }
   
-  .department-container h1 {
+  .department-info {
     margin-bottom: 20px;
   }
   
-  .department-container p {
-    margin: 5px 0;
+  .department-info h1 {
+    margin-bottom: 20px;
   }
   
-  #threejs-container {
-    width: 100%;
-    height: 500px;
-    margin-top: 20px;
+  .department-info p {
+    margin: 5px 0;
   }
   
