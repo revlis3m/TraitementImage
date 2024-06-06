@@ -5,6 +5,7 @@ import ModelView from './ModelView';
 import EyeView from './EyeView';
 import GlassesView from './GlassesView';
 import Navigation from '../components/Navigation';
+import DepartmentNavigation from '../components/DepartmentNavigation';
 import '../styles/Ophtalmo.css';
 
 const Ophtalmo = () => {
@@ -41,7 +42,8 @@ const Ophtalmo = () => {
           <h1>Département Ophtalmologie</h1>
           <p>Nom: {user.name}</p>
           <p>Sexe: {user.sex === 'male' ? 'Homme' : user.sex === 'female' ? 'Femme' : 'Autre'}</p>
-          <p>Rôle: {user.role === 'medecin' ? 'Médecin' : 'Patient'}</p>
+          <p>Rôle: {user.role === 'medecin' ? 'Médecin' : 'Patient'}</p><br/><br/><br/><br/><br/><br/><br/>
+          <DepartmentNavigation />
         </div>
       </div>
       <div className="center-section">

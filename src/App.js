@@ -19,7 +19,7 @@ function App() {
             <Switch>
               <Route path="/" component={ReceptionScene} />
               <Route path="/welcome" component={WelcomePage} />
-              <Route path="/departments/general" component={Generaliste} />
+              <Route path="/departments/" component={Generaliste} />
               <Route path="/departments/ophtalmo" component={Ophtalmo} />
               <Route path="/departments/radio" component={Radio} />
               <Route path="/departments/cardio" component={Cardio} />

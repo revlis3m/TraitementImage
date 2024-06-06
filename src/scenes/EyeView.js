@@ -42,11 +42,11 @@ const EyeView = () => {
     // Charger le modèle GLB
     const loader = new GLTFLoader();
     loader.load(
-      '/models/Lymphocyte.glb', // Chemin du fichier GLB
+      '/models/eye.glb', // Chemin du fichier GLB
       (gltf) => {
         const object = gltf.scene;
         // Agrandir le modèle
-        object.scale.set(1, 1, 1); // Ajustez les valeurs pour la mise à l'échelle souhaitée
+        object.scale.set(130, 130, 130); // Ajustez les valeurs pour la mise à l'échelle souhaitée
         scene.add(object);
       },
       (xhr) => {

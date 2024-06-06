@@ -83,7 +83,7 @@ const WelcomePage = () => {
                 <label>
                   Département :
                   <select name="department" value={user.department} onChange={handleInputChange} required>
-                    <option value="general">Généraliste</option>
+                    <option value="">Généraliste</option>
                     <option value="ophtalmo">Ophtalmologie</option>
                     <option value="radio">Radiologie</option>
                     <option value="cardio">Cardiologie</option>
@@ -103,7 +103,7 @@ const WelcomePage = () => {
                   <label>
                     Département médical :
                     <select name="department" value={user.department} onChange={handleInputChange} required>
-                      <option value="general">Généraliste</option>
+                      <option value="">Généraliste</option>
                       <option value="ophtalmo">Ophtalmologie</option>
                       <option value="radio">Radiologie</option>
                       <option value="cardio">Cardiologie</option>

@@ -2,6 +2,7 @@
 import React, { useState, useContext } from 'react';
 import { UserContext } from '../UserContext';
 import GeneralNavigation from '../components/GeneralNavigation';
+import DepartmentNavigation from '../components/DepartmentNavigation';
 import BodyPartModal from '../components/BodyPartModal';
 import '../styles/Generaliste.css';
 
@@ -22,7 +23,8 @@ const Generaliste = () => {
           <h1>Département Généraliste</h1>
           <p>Nom: {user.name}</p>
           <p>Sexe: {user.sex === 'male' ? 'Homme' : user.sex === 'female' ? 'Femme' : 'Autre'}</p>
-          <p>Rôle: {user.role === 'medecin' ? 'Médecin' : 'Patient'}</p>
+          <p>Rôle: {user.role === 'medecin' ? 'Médecin' : 'Patient'}</p><br/><br/><br/><br/><br/><br/><br/>
+          <DepartmentNavigation />
         </div>
       </div>
       <div className="center-section">
