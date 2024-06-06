@@ -3,6 +3,7 @@ import React, { useState, useContext } from 'react';
 import { UserContext } from '../UserContext';
 import ModelView from './ModelView';
 import EyeView from './EyeView';
+import GlassesView from './GlassesView';
 import Navigation from '../components/Navigation';
 import '../styles/Ophtalmo.css';
 
@@ -11,10 +12,10 @@ const Ophtalmo = () => {
   const [model, setModel] = useState('sphere');
 
   const renderModel = () => {
-    if (model === 'sphere' || model === 'cube') {
-      return <ModelView model={model} />;
-    } else if (model === 'eye') {
+    if (model === 'eye') {
       return <EyeView />;
+    } else if (model == 'glasses') {
+      return <GlassesView />;
     }
   };
 
@@ -26,6 +27,8 @@ const Ophtalmo = () => {
         return 'Cube View';
       case 'eye':
         return 'Eye View';
+      case 'glasses' :
+        return 'Glasses View'
       default:
         return '';
     }
