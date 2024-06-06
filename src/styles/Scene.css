@@ -1,7 +1,14 @@
 /* src/styles/Scene.css */
 #threejs-container {
-    width: 100%;
-    height: 500px;
-    margin-top: 20px;
-  }
-  
+  width: 100%;
+  max-width: 800px; /* Limite la largeur maximale du conteneur */
+  height: 500px;
+  margin: 0 auto; /* Centre le conteneur horizontalement */
+  border: 1px solid #ccc; /* Ajoute une bordure pour une meilleure visibilité */
+  position: relative; /* Pour assurer le positionnement correct du canvas */
+}
+
+#threejs-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}

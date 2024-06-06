@@ -1,14 +1,22 @@
 // src/scenes/Ophtalmo.js
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { UserContext } from '../UserContext';
-import { useContext } from 'react';
 import ModelView from './ModelView';
+import Model3DView from './Model3DView';
 import Navigation from '../components/Navigation';
 import '../styles/Ophtalmo.css';
 
 const Ophtalmo = () => {
   const { user } = useContext(UserContext);
   const [model, setModel] = useState('sphere');
+
+  const renderModel = () => {
+    if (model === 'sphere' || model === 'cube') {
+      return <ModelView model={model} />;
+    } else if (model === 'model3d') {
+      return <Model3DView />;
+    }
+  };
 
   return (
     <div className="ophtalmo-container">
@@ -19,7 +27,7 @@ const Ophtalmo = () => {
         <p>Sexe: {user.sex === 'male' ? 'Homme' : user.sex === 'female' ? 'Femme' : 'Autre'}</p>
         <p>Rôle: {user.role === 'medecin' ? 'Médecin' : 'Patient'}</p>
       </div>
-      <ModelView model={model} />
+      {renderModel()}
     </div>
   );
 };
