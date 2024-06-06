@@ -1,11 +1,11 @@
-// src/scenes/Model3DView.js
+// src/scenes/EyeView.js
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import '../styles/Scene.css';
 
-const Model3DView = () => {
+const EyeView = () => {
   const mountRef = useRef(null);
 
   useEffect(() => {
@@ -87,4 +87,4 @@ const Model3DView = () => {
   return <div id="threejs-container" ref={mountRef}></div>;
 };
 
-export default Model3DView;
+export default EyeView;

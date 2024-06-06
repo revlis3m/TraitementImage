@@ -1,7 +1,7 @@
 /* src/styles/Scene.css */
 #threejs-container {
   width: 100%;
-  max-width: 800px; /* Limite la largeur maximale du conteneur */
+  max-width: 1000px; /* Limite la largeur maximale du conteneur */
   height: 500px;
   margin: 0 auto; /* Centre le conteneur horizontalement */
   border: 1px solid #ccc; /* Ajoute une bordure pour une meilleure visibilité */
