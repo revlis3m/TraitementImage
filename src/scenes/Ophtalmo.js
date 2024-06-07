@@ -1,37 +1,49 @@
 // src/scenes/Ophtalmo.js
-import React, { useState, useContext } from 'react';
-import { UserContext } from '../UserContext';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'wouter';
 import ModelView from './ModelView';
 import EyeView from './EyeView';
-import GlassesView from './GlassesView';
+import ImageView from './ImageView';
 import Navigation from '../components/Navigation';
 import DepartmentNavigation from '../components/DepartmentNavigation';
 import '../styles/Ophtalmo.css';
 
 const Ophtalmo = () => {
-  const { user } = useContext(UserContext);
+  const [location] = useLocation();
+  const [user, setUser] = useState({ name: '', sex: '', role: '' });
   const [model, setModel] = useState('sphere');
 
-  const renderModel = () => {
-    if (model === 'eye') {
-      return <EyeView />;
-    } else if (model == 'glasses') {
-      return <GlassesView />;
-    }
-  };
+  useEffect(() => {
+    const params = new URLSearchParams(location.split('?')[1]);
+    const name = params.get('name');
+    const sex = params.get('sex');
+    const role = params.get('role');
+    setUser({ name, sex, role });
+  }, [location]);
 
-  const getViewName = () => {
+  const renderModel = () => {
     switch (model) {
       case 'sphere':
-        return 'Sphere View';
       case 'cube':
-        return 'Cube View';
+        return <ModelView model={model} />;
       case 'eye':
-        return 'Eye View';
-      case 'glasses' :
-        return 'Glasses View'
+        return <EyeView />;
+      case 'oeil detaille':
+        return (
+          <ImageView
+            imageSrc="/assets/gif/eye.gif"
+            description="Modele 3D d'un oeil anime et detaille"
+          />
+        );
+      case 'eyeillus':
+        return (
+          <ImageView
+            imageSrc="/assets/gif/eyeillus.gif"
+            description="Animation de comment marche la vision"
+          />
+        );
       default:
-        return '';
+        return null;
     }
   };
 
@@ -47,7 +59,7 @@ const Ophtalmo = () => {
         </div>
       </div>
       <div className="center-section">
-        <h1>{`Vue ${getViewName()}`}</h1>
+        <h1>{`Vue ${model.charAt(0).toUpperCase() + model.slice(1)}`}</h1>
         {renderModel()}
       </div>
       <div className="right-section">
