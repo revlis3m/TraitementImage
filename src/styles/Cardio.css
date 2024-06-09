@@ -1,0 +1,77 @@
+/* src/styles/Cardio.css */
+.cardio-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    box-sizing: border-box; /* Assure que padding et border sont inclus dans la hauteur et largeur */
+}
+
+.cardio-sidebar {
+    width: 20%; /* Réglage de la largeur de la sidebar pour s'assurer qu'elle est visible */
+    min-width: 200px; /* Minimum width to ensure visibility */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0; /* Background color for visibility */
+    box-sizing: border-box;
+}
+
+.department-info {
+    margin-bottom: 20px; /* Espacement entre les infos et les boutons de navigation */
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.cardio-container .navigation-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cardio-container button {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cardio-container button:hover {
+    background-color: #0056b3;
+}
+
+.cardio-container button.active {
+    background-color: #004085;
+}
+
+.cardio-content {
+    flex-grow: 1; /* Allows this section to fill the rest of the space */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevents content from spilling over */
+}
+
+.heart-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.toggle-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.toggle-button:hover {
+    background-color: #0056b3;
+}
